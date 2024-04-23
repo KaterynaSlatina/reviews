@@ -1,7 +1,3 @@
-// window.addEventListener("resize", function () {
-//   swiper.update(); // Обновление Swiper
-// });
-
 const prevButton = document.querySelector(".swiper-button-prev");
 const nextButton = document.querySelector(".swiper-button-next");
 
@@ -13,15 +9,48 @@ if (isMobileDevice) {
 
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
-  effect: "cards",
+  effect: isMobileDevice ? "slide" : "cards",
+  // effect: "cards",
+  slideShadows: false,
+  slidesPerView: 1,
+
   pagination: {
     el: ".swiper-pagination",
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+
+  on: {
+    slideChange: function () {
+      const currentSlide = this.slides[this.activeIndex];
+
+      const allNames = document.querySelectorAll(".reviewer-name");
+      allNames.forEach((name) => {
+        name.classList.remove("hide-name");
+      });
+
+      const allTexts = document.querySelectorAll(".review-text");
+      allTexts.forEach((text) => {
+        text.classList.remove("hide-text");
+      });
+
+      const otherNames = document.querySelectorAll(
+        ".reviewer-name:not(.swiper-slide-active .reviewer-name)"
+      );
+      otherNames.forEach((name) => {
+        name.classList.add("hide-name");
+      });
+
+      const otherTexts = document.querySelectorAll(
+        ".review-text:not(.swiper-slide-active .review-text)"
+      );
+      otherTexts.forEach((text) => {
+        text.classList.add("hide-text");
+      });
+    },
   },
 
   breakpoints: {
