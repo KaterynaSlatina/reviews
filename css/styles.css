@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url(/img/trucks-mobile.jpg) no-repeat center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/img/trucks-mobile.jpg) no-repeat center/cover;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   min-width: 0;
 }
@@ -38,12 +35,8 @@ body img {
   text-transform: capitalize;
   letter-spacing: 2%;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 @media screen and (min-width: 1200px) {
   .container h1 {
@@ -67,16 +60,9 @@ body img {
 }
 
 .reviewer-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .reviewer-name {
@@ -98,19 +84,10 @@ body img {
 }
 
 .reviewer-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .swiper-3d .swiper-slide-shadow {
@@ -125,8 +102,7 @@ body img {
 }
 
 .swiper-3d .swiper-wrapper {
-  -webkit-transform-style: flat;
-          transform-style: flat;
+  transform-style: flat;
 }
 
 @media screen and (min-width: 1200px) {
@@ -140,8 +116,7 @@ body img {
 }
 
 .swiper-slide:not(.swiper-slide-active) img {
-  -webkit-filter: brightness(0.6);
-          filter: brightness(0.6);
+  filter: brightness(0.6);
 }
 
 .swiper-button-next:after,
@@ -158,3 +133,5 @@ body img {
   background: white;
   opacity: 1;
 }
+
+/*# sourceMappingURL=styles.css.map */
