@@ -53,6 +53,14 @@ body {
     @media screen and (min-width: 1200px) {
       font-size: 24px;
       width: 845px;
+      //
+      //
+      //
+      display: flex;
+      //
+      //
+      //
+      //
     }
   }
 }
@@ -94,7 +102,11 @@ body {
 // .swiper-3d .swiper-slide-shadow {
 //   background-color: transparent;
 // }
-.swiper-slide-active img {
-  width: 180px;
-  height: 180px;
+.swiper-slide-active {
+  @media screen and (min-width: 1200px) {
+    img {
+      width: 180px;
+      height: 180px;
+    }
+  }
 }

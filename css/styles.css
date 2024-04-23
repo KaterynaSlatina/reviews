@@ -58,6 +58,9 @@ body img {
   .swiper-slide p {
     font-size: 24px;
     width: 845px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -108,7 +111,9 @@ body img {
           justify-content: center;
 }
 
-.swiper-slide-active img {
-  width: 180px;
-  height: 180px;
+@media screen and (min-width: 1200px) {
+  .swiper-slide-active img {
+    width: 180px;
+    height: 180px;
+  }
 }

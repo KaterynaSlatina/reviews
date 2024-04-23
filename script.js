@@ -13,6 +13,7 @@ const swiper = new Swiper(".swiper", {
   // effect: "cards",
   slideShadows: false,
   slidesPerView: 1,
+  spaceBetween: 32,
 
   pagination: {
     el: ".swiper-pagination",
