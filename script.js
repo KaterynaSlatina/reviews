@@ -11,7 +11,8 @@ const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   effect: isMobileDevice ? "slide" : "cards",
   // effect: "cards",
-  slideShadows: false,
+  centeredSlides: true,
+  // slideShadows: false,
   slidesPerView: 1,
   spaceBetween: 32,
 

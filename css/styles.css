@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url(/img/trucks-mobile.jpg) no-repeat center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/img/trucks-mobile.jpg) no-repeat center/cover;
@@ -30,10 +31,11 @@ body img {
     min-width: 1200px;
   }
 }
-.container h2 {
-  font-family: "Play", sans-serif;
+.container h1 {
+  font-family: "PhonkSans-Light", sans-serif;
   font-size: 32px;
-  text-transform: uppercase;
+  font-weight: 300;
+  text-transform: capitalize;
   letter-spacing: 2%;
   color: white;
   display: -webkit-box;
@@ -44,7 +46,7 @@ body img {
           justify-content: center;
 }
 @media screen and (min-width: 1200px) {
-  .container h2 {
+  .container h1 {
     font-size: 56px;
   }
 }
@@ -148,5 +150,11 @@ body img {
 }
 
 .swiper-pagination-bullet {
-  color: white;
+  background: #1d71b8;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: white;
+  opacity: 1;
 }
