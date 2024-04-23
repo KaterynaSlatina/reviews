@@ -1,0 +1,88 @@
+@import "/css/phonkSans.styles.css";
+@import "/css/roboto.styles.css";
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(/img/trucks-mobile.jpg) no-repeat center / cover;
+  height: fit-content;
+  min-width: 0;
+
+  img {
+    border-radius: 100px;
+    width: 120px;
+    height: 120px;
+  }
+}
+.container {
+  min-width: 320px;
+  max-width: 767px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    min-width: 1200px;
+  }
+
+  h2 {
+    font-family: "phonkSans", sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2%;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 56px;
+    }
+  }
+}
+
+.swiper-slide {
+  p {
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2%;
+    color: white;
+    width: 248px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 24px;
+      width: 845px;
+    }
+  }
+}
+
+.swiper-slide-container {
+  .reviewer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .reviewer-name {
+      text-transform: uppercase;
+
+      @media screen and (min-width: 1200px) {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+// .swiper-button-prev,
+// .swiper-button-next {
+//   display: none;
+//   @media screen and (min-width: 1200px) {
+//     display: contents;
+//   }
+// }
+
+// .swiper-button-next {
+//   display: none;
+//   @media screen and (min-width: 1200px) {
+//     display: contents;
+//   }
+// }
