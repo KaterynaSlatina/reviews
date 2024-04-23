@@ -1,5 +1,4 @@
-@import "/css/phonkSans.styles.css";
-@import "/css/roboto.styles.css";
+@import "./scss/utils/fonts";
 
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
@@ -22,12 +21,16 @@ body {
   margin-top: 80px;
   margin-bottom: 60px;
 
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+  }
+
   @media screen and (min-width: 1200px) {
     min-width: 1200px;
   }
 
   h2 {
-    font-family: "phonkSans", sans-serif;
+    font-family: "Play", sans-serif;
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 2%;
@@ -43,7 +46,7 @@ body {
 
 .swiper-slide {
   p {
-    font-family: "roboto", sans-serif;
+    font-family: "Roboto Flex", sans-serif;
     font-size: 16px;
     letter-spacing: 2%;
     color: white;
@@ -53,14 +56,6 @@ body {
     @media screen and (min-width: 1200px) {
       font-size: 24px;
       width: 845px;
-      //
-      //
-      //
-      display: flex;
-      //
-      //
-      //
-      //
     }
   }
 }
@@ -98,10 +93,20 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-// .swiper-3d .swiper-slide-shadow {
-//   background-color: transparent;
-// }
+//
+//
+//
+//
+//
+.swiper-3d .swiper-slide-shadow {
+  background-color: transparent;
+}
+//
+//
+//
+//
+//
+//
 .swiper-slide-active {
   @media screen and (min-width: 1200px) {
     img {
@@ -109,4 +114,41 @@ body {
       height: 180px;
     }
   }
+}
+
+// .swiper-pagination-bullet {
+//   color: #1d71b8;
+
+//   &:active {
+//     color: white;
+//   }
+// }
+
+.swiper-3d .swiper-wrapper {
+  transform-style: flat;
+}
+
+.swiper-wrapper {
+  @media screen and (min-width: 1200px) {
+    overflow: hidden;
+  }
+}
+
+.swiper-navigation {
+  color: white;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  img {
+    filter: brightness(0.6);
+  }
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: white;
+}
+
+.swiper-pagination-bullet {
+  color: white;
 }

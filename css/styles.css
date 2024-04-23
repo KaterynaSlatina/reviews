@@ -1,5 +1,3 @@
-@import "/css/phonkSans.styles.css";
-@import "/css/roboto.styles.css";
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url(/img/trucks-mobile.jpg) no-repeat center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/img/trucks-mobile.jpg) no-repeat center/cover;
@@ -22,13 +20,18 @@ body img {
   margin-top: 80px;
   margin-bottom: 60px;
 }
+@media screen and (min-width: 768px) {
+  .container {
+    min-width: 768px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .container {
     min-width: 1200px;
   }
 }
 .container h2 {
-  font-family: "phonkSans", sans-serif;
+  font-family: "Play", sans-serif;
   font-size: 32px;
   text-transform: uppercase;
   letter-spacing: 2%;
@@ -47,7 +50,7 @@ body img {
 }
 
 .swiper-slide p {
-  font-family: "roboto", sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 16px;
   letter-spacing: 2%;
   color: white;
@@ -58,9 +61,6 @@ body img {
   .swiper-slide p {
     font-size: 24px;
     width: 845px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 
@@ -111,9 +111,42 @@ body img {
           justify-content: center;
 }
 
+.swiper-3d .swiper-slide-shadow {
+  background-color: transparent;
+}
+
 @media screen and (min-width: 1200px) {
   .swiper-slide-active img {
     width: 180px;
     height: 180px;
   }
+}
+
+.swiper-3d .swiper-wrapper {
+  -webkit-transform-style: flat;
+          transform-style: flat;
+}
+
+@media screen and (min-width: 1200px) {
+  .swiper-wrapper {
+    overflow: hidden;
+  }
+}
+
+.swiper-navigation {
+  color: white;
+}
+
+.swiper-slide:not(.swiper-slide-active) img {
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: white;
+}
+
+.swiper-pagination-bullet {
+  color: white;
 }
